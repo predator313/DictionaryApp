@@ -9,7 +9,7 @@ import `in`.aamir.ashraf.mydictionary.feature_dictionary.domain.model.WordInfo
 data class WordInfoEntity (
     val meanings: List<Meaning>,
     val phonetic: String,
-    val sourceUrls: List<String>,
+
     val word: String,
     @PrimaryKey(autoGenerate = true) val id:Long?=null
 
@@ -18,7 +18,6 @@ data class WordInfoEntity (
         return WordInfo(
             meanings = meanings,
             phonetic = phonetic,
-            sourceUrls = sourceUrls,
             word = word
         )
     }

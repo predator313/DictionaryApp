@@ -8,14 +8,14 @@ data class WordInfoDto(
     val meanings: List<MeaningDto>,
     val phonetic: String,
     val phonetics: List<PhoneticDto>,
-    val sourceUrls: List<String>,
+
     val word: String
 ){
     fun toWordInfoEntity():WordInfoEntity{
         return WordInfoEntity(
             meanings = meanings.map { it.toMeaning() },
             phonetic = phonetic,
-            sourceUrls= sourceUrls,
+
             word = word
         )
     }

@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "in.aamir.ashraf.mydictionary"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "in.aamir.ashraf.mydictionary"

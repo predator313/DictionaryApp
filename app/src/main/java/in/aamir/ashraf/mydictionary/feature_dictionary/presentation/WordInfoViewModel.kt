@@ -55,7 +55,7 @@ class WordInfoViewModel @Inject constructor(
                                 wordInfoItems = result.data?: emptyList(),
                                 isLoading = false
                             )
-                            _eventFlow.emit(UIEvent.showSnackbar(result.message?:"UnKnownError"))
+                            _eventFlow.emit(UIEvent.ShowSnackbar(result.message?:"UnKnownError"))
                         }
                         is Resource.Loading->{
                             _state.value = state.value.copy(
@@ -72,6 +72,6 @@ class WordInfoViewModel @Inject constructor(
 
 
     sealed class UIEvent{
-        data class showSnackbar(val message:String):UIEvent()
+        data class ShowSnackbar(val message:String):UIEvent()
     }
 }
